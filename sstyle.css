@@ -1,0 +1,1199 @@
+body{
+    background-color: black;
+}
+
+
+.sidebar{ grid-area:sidebar; }
+.library { grid-area: library; }
+.content { grid-area: content; }
+.border{grid-area: border;}
+
+
+.container{
+  display: grid;
+  grid-template-areas:  'sidebar content content' 'library content content ' ' border border border' ;
+}
+
+
+
+
+
+
+
+/*sidebar*/
+.sidebar .ulnav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 23%;
+    height: 10%;
+    border: hidden;
+    background-color: #111111;
+    border-radius: 10px;
+    position: fixed;
+    height: 18.5%;
+    overflow: auto;
+}
+
+.sidebar .ulnav .linavhs{
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+}
+
+.sidebar .ulnav .linavhs .linkli{
+    color: white;
+    font-size:15px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-decoration: none;
+    line-height: 45px;
+    padding: 10px ;
+    margin-bottom: 10px;
+}
+
+
+.sidebar .ulnav .linavhs .linkli i{
+    padding-right: 15px;
+    font-size: 30px;
+    margin-left: -10px;
+}
+
+.sidebar .ulnav .linavhs .linkli span{
+  transition: color .3s;
+    color: rgb(163, 163, 163);
+}
+
+.sidebar .ulnav .linavhs .linkli span:hover{
+    color: white;
+}
+
+/*---------------------------------------------------------------*/
+
+/*library*/
+.library{
+  margin-top: 9.3%;
+    padding: 0;
+    padding-top: 10px;
+    width: 23%;
+    border: hidden;
+    background-color: #111111;
+    border-radius: 10px;
+    position: fixed;
+    height: 430px;
+}
+
+.library .librarylist .linklibrary{
+    color: rgb(163, 163, 163);
+    font-size:16px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-decoration: none;
+    line-height: 45px;
+    padding: 29px ;
+    margin-bottom: 10px;
+    transition: color .3s;
+}
+
+.library .librarylist .linklibrary:hover{
+   color: white;
+}
+
+
+.library .librarylist .plusicon{
+   padding-left:10px;
+   padding-right: 10px;
+   padding-top: 7px;
+   padding-bottom: 7px;
+   font-size: 20px;
+   color: gray;
+   transition: color .3s;
+   margin-left: 85px;
+}
+
+
+.library .librarylist .plusicon:hover{
+  border: hidden;
+  border-radius: 30px;
+  background-color: rgb(24, 23, 23);
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.tooltiptext{
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+
+/*------------------------------------------------------------------------------------*/
+
+/*playlist*/
+.container .library .cplaylist{
+  width:323.5px;
+  height: 170px;
+  overflow: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  margin-left: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #353535; 
+}
+
+/*------------------------border1-------------------------*/
+.container .library .cplaylist .border1{
+  border: hidden;
+  background-color: rgb(44, 43, 43);
+  border-radius: 8px;
+  width: 299px;
+  margin-left: 7.5px;
+  height: 140px;
+}
+
+.container .library .cplaylist .border1 .ctext{
+  color: white;
+  padding-left: 20px;
+  padding-top: 18px;
+  font-family:Arial, sans-serif;
+  font-weight:bold;
+}
+
+.container .library .cplaylist .border1 .easytext{
+  color: rgb(230, 229, 229);
+  padding-left: 22px;
+  padding-top: 1px;
+  font-family:Arial, sans-serif;
+  font-weight:100px;
+  font-size: 13.5px;
+}
+
+
+.container .library .cplaylist .border1 .Createbutton .buttoncreatetext{
+  margin-left: 22px;
+  margin-top: 25px;
+  border: hidden;
+  background-color: white;
+  border-radius: 18px;
+  width: 125px;
+  height: 24px;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight:bold ;
+  text-align: center;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.container .library .cplaylist .border1 .Createbutton .buttoncreatetext:hover{
+  transform: scale(1.04);
+  background-color: rgb(247, 246, 246);
+}
+
+
+/*------------------------border2-------------------------*/
+.container .library .cplaylist .border2{
+  border: hidden;
+  background-color: rgb(44, 43, 43);
+  border-radius: 8px;
+  width: 299px;
+  margin-left: 7.5px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  height: 140px;
+}
+
+.container .library .border2 .ctext2{
+  color: white;
+  padding-left: 20px;
+  padding-top: 18px;
+  font-family:Arial, sans-serif;
+  font-weight:bold;
+  font-size: 15px;
+}
+
+.container .library .border2 .updatetext{
+  color: rgb(230, 229, 229);
+  padding-left: 20px;
+  padding-top: 1px;
+  font-family:Arial, sans-serif;
+  font-weight:bold;
+  font-size: 13px;
+}
+
+.container .library .border2 .browsebutton .buttonbrowsetext{
+  margin-left: 22px;
+  margin-top: 25px;
+  border: hidden;
+  background-color: white;
+  border-radius: 18px;
+  width: 150px;
+  height: 24px;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight:bold ;
+  text-align: center;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+
+.container .library .border2 .browsebutton .buttonbrowsetext:hover{
+  transform: scale(1.04);
+  background-color: rgb(247, 246, 246);
+}
+
+
+
+/*------------------------librarylink-------------------------*/
+.container .library .librarylinks a{
+   color:rgb(230, 229, 229);
+   font-size: 10.3px;
+   padding: 0px;
+   margin-left: 22px;
+   line-height: 30px;
+   font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none;
+   transition: text-decoration .4s;
+}
+
+.container .library .librarylinks a:active{
+      text-decoration:underline;
+      text-decoration-thickness: 2px;
+}
+
+/*-----------------------language-------------------------*/
+.container .library .language .languagebutton{
+  border: solid;
+  border-color: rgb(78, 78, 78);
+  border-radius: 20px;
+  border-bottom-width: 1px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-left-width: 1px;
+  width: 90px;
+  height: 25px;
+  color: white;
+  margin-left: 23px;
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.container .library .language .languagebutton:hover{
+  transform: scale(1.04);
+  border-color:white ;
+}
+
+.container .library .language .languageicon{
+  padding-right: 5px;
+  font-size: 17px;
+  
+}
+
+
+/*-----------------------content-------------------------*/
+
+.container .content{
+  border: hidden;
+  background-color: #111111;
+  width: 100%;
+  height: 565px;
+  margin-right:-640px ;
+  margin-top: 1px;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+.container .content .navbar{
+  border: hidden;
+  background-color: #0c0c0c;
+  margin-top: -16px;
+  height: 65px;
+  position: sticky;
+}
+/*--------------------signup-------------*/
+.container .content .navbar .signupli{
+  list-style: none;
+}
+
+.container .content .navbar .signup .signuplink{
+  color: rgb(163, 163, 163);
+  float: right;
+  padding-right: 17%;
+  padding-top: 25px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 15.5px;
+}
+
+
+.container .content .navbar .signup .signupli .signuplink:hover{
+   color: white;
+   transform: scaleX(1.001);
+}
+/*--------------------login----------------*/
+.container .content .navbar .login .loginbutton{
+  float: right;
+  margin-right: -20%;
+  margin-top: 7px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: white;
+  width: 110px;
+  height: 50px;
+  border: hidden;
+  border-radius: 30px;
+}
+
+
+.container .content .navbar .login .loginbutton:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+  background-color: #ebe9e9;
+}
+
+/*--------------------icons-------------*/
+.container .content .navbar .entity .entityicon .greatericon i{
+  color: gray;
+  border: hidden;
+  background-color: #0a0a0a;
+  margin-top: 17px;
+  margin-left: 25px;
+  width:35px;
+  border-radius: 20px;
+  padding-top: 9px;
+  font-size: 18px;
+  height: 25px;
+  text-align: center;
+  cursor:not-allowed;
+}
+
+.container .content .navbar .entity .entityicon .smallericon i{
+  color: gray;
+  border: hidden;
+  background-color: #0a0a0a;
+  margin-top: 17px;
+  margin-left: 5px;
+  width:35px;
+  border-radius: 20px;
+  padding-top: 9px;
+  font-size: 18px;
+  height: 25px;
+  text-align: center;
+  cursor:not-allowed;
+}
+
+/*--------------------playlist1------------------*/
+.container .content .spotifyplaylist {
+  margin-top: 6px;
+}
+
+.container .content .spotifyplaylist .playlistlink1{
+  color: white ;
+  padding-left: 25px;
+  font-size: 22px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.container .content .spotifyplaylist .playlistlink1:hover{
+  text-decoration: underline;
+}
+ 
+
+.container .content .spotifyplaylist .playlistlink2{
+  color: rgb(163, 163, 163);
+  float: right;
+  font-size: 14px;
+  padding-right: 25px;
+  padding-top: 10px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+
+.container .content .spotifyplaylist .playlistlink2:hover{
+  text-decoration: underline;
+}
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*-------------------card1-----------------------*/
+.container .content .playlistcard1 {
+  border: hidden;
+  border-radius: 6px;
+  background-color:#1b1b1b;
+  width: 180px;
+  height: 260px;
+  margin-left: 25px;
+  margin-top: 25px;
+  transition: all .3s;
+}
+
+
+.container .content .playlistcard1 .image1{
+   border: hidden;
+   border-radius: 6px;
+   width: 150px;
+   margin-top: 10px;
+   margin-left: 15px;
+}
+
+.container .content  .playlistcard1 .card1text1{
+  color: white;
+  padding-left: 17px;
+  font-family:sans-serif;
+  font-weight: bold;
+}
+
+.container .content .playlistcard1 .card1text2{
+  color:gray;
+  font-size: 13px;
+  padding-left: 18px;
+  margin-top: -10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.container .content .playlistcard1:hover{
+  background-color: #2e2e2e;
+  cursor: pointer;
+}
+
+/*----------------------card2-----------------------*/
+
+.container .content .playlistcard2 {
+  border: hidden;
+  border-radius: 6px;
+  background-color:#1b1b1b;
+  width: 180px;
+  height: 260px;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.container .content .playlistcard2 .image2{
+  border: hidden;
+  border-radius: 6px;
+  width: 150px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.container .content .playlistcard2 .card2text1{
+ color: white;
+ padding-left: 17px;
+ font-family:sans-serif;
+ font-weight: bold;
+}
+
+.container .content .playlistcard2 .card2text2{
+ color:gray;
+ font-size: 13px;
+ padding-left: 18px;
+ margin-top: -10px;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+.container .content .playlistcard2:hover{
+  background-color: #2e2e2e;
+  cursor: pointer;
+}
+
+/*----------------------card3-----------------------*/
+
+
+.container .content .playlistcard3 {
+  border: hidden;
+  border-radius: 6px;
+  background-color:#1b1b1b;
+  width: 180px;
+  height: 260px;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.container .content .playlistcard3 .image3{
+  border: hidden;
+  border-radius: 6px;
+  width: 150px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.container .content .playlistcard3 .card3text1{
+ color: white;
+ padding-left: 17px;
+ font-family:sans-serif;
+ font-weight: bold;
+}
+
+
+.container .content .playlistcard3 .card3text2{
+  color:gray;
+  font-size: 13px;
+  padding-left: 18px;
+  margin-top: -10px;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ .container .content .playlistcard3:hover{
+  background-color: #2e2e2e;
+  cursor: pointer;
+}
+
+/*----------------------card4-----------------------*/
+
+.container .content .playlistcard4 {
+  border: hidden;
+  border-radius: 6px;
+  background-color:#1b1b1b;
+  width: 180px;
+  height: 260px;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.container .content .playlistcard4 .image4{
+  border: hidden;
+  border-radius: 6px;
+  width: 150px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.container .content .playlistcard4 .card4text1{
+ color: white;
+ padding-left: 17px;
+ font-family:sans-serif;
+ font-weight: bold;
+}
+
+.container .content .playlistcard4 .card4text2{
+  color:gray;
+  font-size: 13px;
+  padding-left: 18px;
+  margin-top: -10px;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+
+ .container .content .playlistcard4:hover{
+  background-color: #2e2e2e;
+  cursor: pointer;
+}
+
+ /*----------------------card5---------------------*/
+
+ .container .content .playlistcard5 {
+  border: hidden;
+  border-radius: 6px;
+  background-color:#1b1b1b;
+  width: 180px;
+  height: 260px;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.container .content .playlistcard5 .image5{
+  border: hidden;
+  border-radius: 6px;
+  width: 150px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.container .content .playlistcard5 .card5text1{
+ color: white;
+ padding-left: 17px;
+ font-family:sans-serif;
+ font-weight: bold;
+}
+
+.container .content .playlistcard5 .card5text2{
+  color:gray;
+  font-size: 13px;
+  padding-left: 18px;
+  margin-top: -10px;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+
+ .container .content .playlistcard5:hover{
+  background-color: #2e2e2e;
+  cursor: pointer;
+}
+ /*--------------------plaulist2------------------------*/
+
+ .container .content .sleepplaylist {
+  margin-top: 30px;
+}
+
+
+.container .content .sleepplaylist .sleeplink1 {
+  color: white ;
+  padding-left: 25px;
+  margin-top: 20px;
+  font-size: 22px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.container .content .sleepplaylist .sleeplink1:hover{
+  text-decoration: underline;
+}
+
+/*--------------card1 secondplaylist---------------*/
+.container .content .sleepcard1 {
+  border: hidden;
+  border-radius: 6px;
+  background-color:#1b1b1b;
+  width: 180px;
+  height: 260px;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.container .content .sleepcard1 .image6{
+  border: hidden;
+  border-radius: 6px;
+  width: 150px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.container .content .sleepcard1 .card6text1{
+ color: white;
+ padding-left: 17px;
+ font-family:sans-serif;
+ font-weight: bold;
+}
+
+.container .content .sleepcard1 .card6text2{
+  color:gray;
+  font-size: 13px;
+  padding-left: 18px;
+  margin-top: -10px;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+
+ .container .content .sleepcard1:hover{
+  background-color: #2e2e2e;
+  cursor: pointer;
+}
+
+
+
+/*--------------card2 secondplaylist---------------*/
+
+.container .content .sleepcard2 {
+  border: hidden;
+  border-radius: 6px;
+  background-color:#1b1b1b;
+  width: 180px;
+  height: 260px;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.container .content .sleepcard2 .image7{
+  border: hidden;
+  border-radius: 6px;
+  width: 150px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.container .content .sleepcard2 .card7text1{
+ color: white;
+ padding-left: 17px;
+ font-family:sans-serif;
+ font-weight: bold;
+}
+
+.container .content .sleepcard2 .card7text2{
+  color:gray;
+  font-size: 13px;
+  padding-left: 18px;
+  margin-top: -10px;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+
+ .container .content .sleepcard2:hover{
+  background-color: #2e2e2e;
+  cursor: pointer;
+}
+
+/*--------------thirdplaylist------------*/
+.container .content .foucsplaylist {
+  margin-top: 30px;
+}
+
+
+.container .content .foucsplaylist .foucslink1 {
+  color: white ;
+  padding-left: 25px;
+  margin-top: 20px;
+  font-size: 22px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.container .content  .foucsplaylist .foucslink1:hover{
+  text-decoration: underline;
+}
+
+.container .content .foucsplaylist .foucslink2{
+  color: rgb(163, 163, 163);
+  float: right;
+  font-size: 14px;
+  padding-right: 25px;
+  padding-top: 10px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+
+.container .content .foucsplaylist .foucslink2:hover{
+  text-decoration: underline;
+}
+/*---------------------third playlist card1---------------*/
+.container .content .foucscard1 {
+  border: hidden;
+  border-radius: 6px;
+  background-color:#1b1b1b;
+  width: 180px;
+  height: 260px;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.container .content .foucscard1 .image8{
+  border: hidden;
+  border-radius: 6px;
+  width: 150px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.container .content .foucscard1 .card8text1{
+ color: white;
+ padding-left: 17px;
+ font-family:sans-serif;
+ font-weight: bold;
+}
+
+.container .content .foucscard1 .card8text2{
+  color:gray;
+  font-size: 13px;
+  padding-left: 18px;
+  margin-top: -10px;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+
+ .container .content .foucscard1:hover{
+  background-color: #2e2e2e;
+  cursor: pointer;
+}
+
+/*---------------------card2 third------------*/
+
+.container .content .foucscard2 {
+  border: hidden;
+  border-radius: 6px;
+  background-color:#1b1b1b;
+  width: 180px;
+  height: 260px;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.container .content .foucscard2 .image9{
+  border: hidden;
+  border-radius: 6px;
+  width: 150px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.container .content .foucscard2 .card9text1{
+ color: white;
+ padding-left: 17px;
+ font-family:sans-serif;
+ font-weight: bold;
+}
+
+.container .content .foucscard2 .card9text2{
+  color:gray;
+  font-size: 13px;
+  padding-left: 18px;
+  margin-top: -10px;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+
+ .container .content .foucscard2:hover{
+  background-color: #2e2e2e;
+  cursor: pointer;
+}
+
+/*-----------card3 third------------*/
+
+.container .content .foucscard3 {
+  border: hidden;
+  border-radius: 6px;
+  background-color:#1b1b1b;
+  width: 180px;
+  height: 260px;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.container .content .foucscard3 .image10{
+  border: hidden;
+  border-radius: 6px;
+  width: 150px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.container .content .foucscard3 .card10text1{
+ color: white;
+ padding-left: 17px;
+ font-family:sans-serif;
+ font-weight: bold;
+}
+
+.container .content .foucscard3 .card10text2{
+  color:gray;
+  font-size: 13px;
+  padding-left: 18px;
+  margin-top: -10px;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+
+ .container .content .foucscard3:hover{
+  background-color: #2e2e2e;
+  cursor: pointer;
+}
+
+
+
+/*-------------card4 third----------*/
+.container .content .foucscard4 {
+  border: hidden;
+  border-radius: 6px;
+  background-color:#1b1b1b;
+  width: 180px;
+  height: 260px;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.container .content .foucscard4 .image11{
+  border: hidden;
+  border-radius: 6px;
+  width: 150px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.container .content .foucscard4 .card11text1{
+ color: white;
+ padding-left: 17px;
+ font-family:sans-serif;
+ font-weight: bold;
+}
+
+.container .content .foucscard4 .card11text2{
+  color:gray;
+  font-size: 13px;
+  padding-left: 18px;
+  margin-top: -10px;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+
+ .container .content .foucscard4:hover{
+  background-color: #2e2e2e;
+  cursor: pointer;
+}
+
+
+
+/*-------------card5 third------------*/
+
+.container .content .foucscard5 {
+  border: hidden;
+  border-radius: 6px;
+  background-color:#1b1b1b;
+  width: 180px;
+  height: 260px;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.container .content .foucscard5 .image12{
+  border: hidden;
+  border-radius: 6px;
+  width: 150px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.container .content .foucscard5 .card12text1{
+ color: white;
+ padding-left: 17px;
+ font-family:sans-serif;
+ font-weight: bold;
+}
+
+.container .content .foucscard5 .card12text2{
+  color:gray;
+  font-size: 13px;
+  padding-left: 18px;
+  margin-top: -10px;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+
+ .container .content .foucscard5:hover{
+  background-color: #2e2e2e;
+  cursor: pointer;
+}
+
+
+/*------------footer------------*/
+/*firstline*/
+.container .content .footertext{
+  border: hidden;
+  margin-top: 80px;
+  margin-left: 30px;
+  display: flex;
+  flex-wrap:wrap ;
+}
+
+.container .content .footertext .firstline .company{
+  color: white;
+  font-size: 17px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.container .content .footertext .firstline .jf{
+  color:rgb(158, 158, 158);
+  font-size: 15px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.container .content .footertext .firstline .jf:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+
+/*secondline*/
+
+
+.container .content .secondline{
+  margin-left: 100px;
+}
+
+.container .content .footertext .secondline .Communities{
+  color: white;
+  font-size: 17px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.container .content .footertext .secondline .fd{
+  color:rgb(158, 158, 158);
+  font-size: 15px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.container .content .footertext .secondline .fd:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+
+/*thirdline*/
+
+
+.container .content .thirdline{
+  margin-left: 100px;
+}
+
+.container .content .footertext .thirdline .Usefullinks{
+  color: white;
+  font-size: 17px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.container .content .footertext .thirdline .ul{
+  color:rgb(158, 158, 158);
+  font-size: 15px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.container .content .footertext .thirdline .ul:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+
+
+.socialmediaicon{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 250px;
+}
+
+.facebook{
+  border: hidden;
+  background-color: #2e2e2e;
+  color: white;
+  font-size: 18px;
+  border-radius: 30px;
+  width: 25px;
+  height: 30px;
+  padding-left: 15px;
+  padding-top: 10px;
+  margin-left: 15px;
+}
+
+.facebook:hover{
+  background-color: rgb(139, 139, 139);
+}
+
+.instgram{
+  border: hidden;
+  background-color: #2e2e2e;
+  color: white;
+  font-size: 18px;
+  border-radius: 30px;
+  width: 27px;
+  height: 30px;
+  padding-left: 10px;
+  padding-top: 10px;
+  margin-left: 15px;
+}
+
+.instgram:hover{
+  background-color: rgb(139, 139, 139);
+}
+
+.tweeter{
+  border: hidden;
+  background-color: #2e2e2e;
+  color: white;
+  font-size: 18px;
+  border-radius: 30px;
+  width: 25px;
+  height: 30px;
+  padding-left: 12px;
+  padding-top: 10px;
+  margin-left: 15px;
+}
+
+.tweeter:hover{
+  background-color: rgb(139, 139, 139);
+}
+
+hr{
+  width: 950px;
+  
+}
+
+.lasttext .lasttextp{
+  font-size: 15px;
+  color: gray;
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-bottom: 70px;
+}
+
+
+.border{
+  border: hidden;
+  background-image: url(background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 8px;
+  height: 60px;
+  cursor: pointer;
+  display: flex;
+
+}
+
+.border .lastbordertext1{
+  color: white;
+  padding-left: 15px;
+  font-size: 14px;
+  font-family: sans-serif;
+  line-height: 10px;
+}
+
+.border .lastbordertext2{
+  color: white;
+  padding-left: 15px;
+  font-size: 17;
+  font-family: sans-serif;
+}
+
+.buttonborder .buttonbordertext{
+  margin-left: 550px;
+  margin-top: 10px;
+  border: hidden;
+  background-color: white;
+  border-radius: 22px;
+  width: 150px;
+  height: 30px;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight:bold ;
+  text-align: center;
+  padding-top: 13px;
+  cursor: pointer;
+}
+
+
+.buttonborder .buttonbordertext:hover{
+  transform: scale(1.04);
+  background-color: rgb(247, 246, 246);
+}
